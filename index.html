@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Visualizing Tasks</title>
+    <!--AJAX Link to include Google Charts-->
+     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    
+    
+     <script type="text/javascript" src="js/script.js"></script>
+    
+  </head>  
+  <body>
+    <h1>What's on the list to do today?</h1>
+    <form id="toDoForm" onsubmit="getFormData(); return false;">
+      <fieldset>
+        <legend>Task Master</legend>
+        <label for="tunisia">
+          <input type="radio" name="person" id="tunisia" value="Tunisia" required>
+          Tunisia
+        </label>
+        <label for ="william">
+          <input type="radio" name="person" id="william" value="William">
+          William
+        </label>
+        <label for ="anita">
+          <input type="radio" name="person" id="anita" value="Anita">
+           Anita
+        </label>     
+      </fieldset>
+
+      <fieldset>
+        <legend>Task Information</legend>
+        <label>Task Difficulty</label>
+        <select id ="difficulty" required>
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+        <label for="description">Task Description</label>
+        <input type="text" id="description" size="100">
+      </fieldset>  
+      <input type="submit" id="assignTask" value="Assign Task">   
+  </form>
+  <div id ="displayData">
+    <div id="pieHoleChart"></div>   
+    <ul id ="toDoTasks"></ul>
+    </div>
+  </body>
+</html>
